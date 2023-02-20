@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react'
 import servidorAxios from '../../config/servidorAxios';
 import Alerta from "./Alerta";
 import TablaAlumno from './TablaAlumno';
+import useAuth from "../hooks/useAuth";
+import Cargando from './Cargando';
 
-const crearAlumno = () => {
+const EditarAlumno = () => {
     const [nombre,setNombre] = useState();
     const [apellidoPaterno,setApellidoPaterno] = useState();
     const [apellidoMaterno,setApellidoMaterno] = useState();
@@ -12,11 +14,19 @@ const crearAlumno = () => {
     const [celular,setCelular] = useState();
     const [direccion,setDireccion] = useState();
     const [alerta, setAlerta] = useState("")
+    const { alumno, cargando } = useAuth();
+    if(alumno.nombre) return <Cargando/>
+    useEffect(()=>{
+        console.log(alerta)
+        if(alumno){
+            setNombre(alumno.apellidoMaterno)
+        }
+    },[])
 const handleSubmit=async(e)=>{
 e.preventDefault()
 try{
     const respuesta = await servidorAxios({
-        method: 'POST',
+        method: 'PATCH',
         url: `/alumno`,
         data:{
             nombre,
@@ -49,6 +59,7 @@ try{
 }   
 }
 const msg = alerta;
+console.log(alumno)
 
   return (
     <>
@@ -173,8 +184,9 @@ const msg = alerta;
       </div>
     
     </form>
+    <TablaAlumno/>
     </>
   )
 }
 
-export default crearAlumno
+export default EditarAlumno
