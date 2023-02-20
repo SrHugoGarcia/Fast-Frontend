@@ -17,8 +17,8 @@ import { Outlet } from 'react-router-dom'
 const navigation = [
   { name: 'Crear Alumno', href: '/alumno', icon: HomeIcon, current: true },
   { name: 'Lista Alumno', href: '/alumno-lista', icon: UsersIcon, current: false },
-  { name: 'Projects', href: '#', icon: FolderIcon, current: false },
-  { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
+  { name: 'Crear Profesor', href: '/profesor', icon: FolderIcon, current: false },
+  { name: 'Lista Profesor', href: '/profesor-lista', icon: CalendarIcon, current: false },
   { name: 'Documents', href: '#', icon: InboxIcon, current: false },
   { name: 'Reports', href: '#', icon: ChartBarIcon, current: false },
 ]
