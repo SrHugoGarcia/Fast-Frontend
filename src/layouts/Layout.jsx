@@ -4,7 +4,7 @@ import {
   Bars3BottomLeftIcon,
   BellIcon,
   CalendarIcon,
-  ChartBarIcon,
+  PlusCircleIcon,
   FolderIcon,
   HomeIcon,
   InboxIcon,
@@ -12,21 +12,17 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
-import { Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 
 const navigation = [
-  { name: 'Crear Alumno', href: '/alumno', icon: HomeIcon, current: true },
-  { name: 'Lista Alumno', href: '/alumno-lista', icon: UsersIcon, current: false },
-  { name: 'Crear Profesor', href: '/profesor', icon: FolderIcon, current: false },
-  { name: 'Lista Profesor', href: '/profesor-lista', icon: CalendarIcon, current: false },
-  { name: 'Documents', href: '#', icon: InboxIcon, current: false },
-  { name: 'Reports', href: '#', icon: ChartBarIcon, current: false },
+  { name: 'Crear Alumno', href: '/alumno', icon: PlusCircleIcon, current: true },
+  { name: 'Lista Alumno', href: '/alumno-lista', icon: Bars3BottomLeftIcon, current: false },
+  { name: 'Crear Profesor', href: '/profesor', icon: PlusCircleIcon, current: false },
+  { name: 'Lista Profesor', href: '/profesor-lista', icon: Bars3BottomLeftIcon, current: false },
+  { name: 'Crear Asignatura', href: '/asignatura', icon: PlusCircleIcon, current: false },
+  { name: 'Lista  Asignatura', href: '/asignatura-lista', icon: Bars3BottomLeftIcon, current: false },
 ]
-const userNavigation = [
-  { name: 'Your Profile', href: '#' },
-  { name: 'Settings', href: '#' },
-  { name: 'Sign out', href: '#' },
-]
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -113,9 +109,9 @@ const Layout = () => {
             <div className="flex flex-1 flex-col overflow-y-auto">
               <nav className="flex-1 space-y-1 px-2 py-4">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.href}
+                    to={item.href}
                     className={classNames(
                       item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                       'group flex items-center px-2 py-2 text-sm font-medium rounded-md'
@@ -129,7 +125,7 @@ const Layout = () => {
                       aria-hidden="true"
                     />
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </nav>
             </div>

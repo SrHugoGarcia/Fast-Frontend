@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import TablaAlumno from './components/TablaAlumno'
+import TablaAsignatura from './components/TablaAsignatura'
 import TablaProfesor from './components/TablaProfesor'
 import { AuthProvider } from './context/AuthProvider'
 import Layout from './layouts/Layout'
@@ -19,9 +20,9 @@ function App() {
             <Route path='/alumno' element={<Alumno/>}/>
             <Route path='/alumno-lista' element={<TablaAlumno/>}/>
             <Route path='/asignatura' element={<Asignatura/>}/>
+            <Route path='/asignatura-lista' element={<TablaAsignatura/>}/>
             <Route path='/profesor' element={<Profesor/>}/>
             <Route path='/profesor-lista' element={<TablaProfesor/>}/>
-
         </Route>
       </Routes>
       </AuthProvider>

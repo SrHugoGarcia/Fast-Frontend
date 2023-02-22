@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import servidorAxios from '../../config/servidorAxios';
 import Alerta from "./Alerta";
-const CrearEscuela = () => {
+const CrearAsignatura = () => {
     const [nombre,setNombre] = useState();
     const [creditos,setCreditos] = useState();
     const [horas,setHoras] = useState();
@@ -111,14 +111,9 @@ const msg = alerta;
       </div>
     
     </form>
-    {editar?
-    <>
-    
-    </>:
-    <>
-    </>}
+   
     </>
   )
 }
 
-export default CrearEscuela
+export default CrearAsignatura

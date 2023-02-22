@@ -1,10 +1,10 @@
 import React from 'react'
-import CrearEscuela from '../components/CrearEscuela'
+import CrearAsignatura from '../components/CrearAsignatura'
 
 const Asignatura = () => {
   return (
     <>
-        <CrearEscuela/>
+        <CrearAsignatura/>
     </>
   )
 }

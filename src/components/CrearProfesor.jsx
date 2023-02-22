@@ -68,7 +68,7 @@ const msg = alerta;
 
         <div className="md:grid md:grid-cols-3 md:gap-6">
           <div className="md:col-span-1">
-            <h3 className="text-lg font-medium leading-6 text-gray-900">Profeosr</h3>
+            <h3 className="text-lg font-medium leading-6 text-gray-900">Profesor</h3>
             <p className="mt-1 text-sm text-gray-500">Aqui puedes dar de alta un profesor</p>
           </div>
           <div className="mt-5 md:col-span-2 md:mt-0">
