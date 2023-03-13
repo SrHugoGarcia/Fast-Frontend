@@ -1,4 +1,3 @@
-import React from 'react'
 import CrearProfesor from "../components/CrearProfesor"
 const Profesor = () => {
   return (

@@ -1,5 +1,4 @@
-import React from 'react'
-import CrearAlumno from '../components/crearAlumno'
+import CrearAlumno from '../components/CrearAlumno'
 const Alumno = () => {
   return (
     <>

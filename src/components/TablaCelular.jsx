@@ -1,11 +1,6 @@
-import { useEffect,Fragment, useState } from "react"
+import { useEffect, useState } from "react"
 import servidorAxios from "../../config/servidorAxios"
-import { Listbox, Transition } from '@headlessui/react'
-import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
 import Alerta from "./Alerta";
 
 

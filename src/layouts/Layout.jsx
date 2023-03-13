@@ -11,7 +11,6 @@ import {
   UsersIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
-import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import { Link, Outlet } from 'react-router-dom'
 
 const navigation = [
