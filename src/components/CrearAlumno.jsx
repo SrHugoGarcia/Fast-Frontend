@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import servidorAxios from '../../config/servidorAxios';
 import Alerta from "./Alerta";
-import TablaAlumno from './TablaAlumno';
+
 
 const crearAlumno = () => {
     const [nombre,setNombre] = useState();
