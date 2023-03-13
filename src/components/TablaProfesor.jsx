@@ -5,7 +5,7 @@ import Alerta from "./Alerta";
 
 
   export default function TablaProfesor() {
-    const[datos, setDatos] = useState()
+    const[datos, setDatos] = useState([])
     const[editar, setEditar] = useState(false)
     const [alumno, setAlumno]= useState({})
     const [alerta, setAlerta] = useState()
@@ -197,8 +197,8 @@ import Alerta from "./Alerta";
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200 bg-white">
-                    {datos && datos.map((person) => (
-                      <tr key={person}>
+                    {datos && datos.map((person,i) => (
+                      <tr key={i}>
                         <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
                           {person.nombre}
                         </td>

@@ -10,7 +10,7 @@ import Alerta from "./Alerta";
 
 
   export default function TablaAsignatura() {
-    const[datos, setDatos] = useState()
+    const[datos, setDatos] = useState([])
     const[editar, setEditar] = useState(false)
     const [alerta,setAlerta] = useState()
     const [nombre,setNombre] = useState();
