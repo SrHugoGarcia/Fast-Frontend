@@ -15,12 +15,14 @@ import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import { Link, Outlet } from 'react-router-dom'
 
 const navigation = [
-  { name: 'Crear Alumno', href: '/alumno', icon: PlusCircleIcon, current: true },
+ /* { name: 'Crear Alumno', href: '/alumno', icon: PlusCircleIcon, current: true },
   { name: 'Lista Alumno', href: '/alumno-lista', icon: Bars3BottomLeftIcon, current: false },
   { name: 'Crear Profesor', href: '/profesor', icon: PlusCircleIcon, current: false },
   { name: 'Lista Profesor', href: '/profesor-lista', icon: Bars3BottomLeftIcon, current: false },
   { name: 'Crear Asignatura', href: '/asignatura', icon: PlusCircleIcon, current: false },
-  { name: 'Lista  Asignatura', href: '/asignatura-lista', icon: Bars3BottomLeftIcon, current: false },
+  { name: 'Lista  Asignatura', href: '/asignatura-lista', icon: Bars3BottomLeftIcon, current: false },*/
+  { name: 'Crear Celular', href: '/celular', icon: PlusCircleIcon, current: false },
+  { name: 'Lista  Celular', href: '/celular-lista', icon: Bars3BottomLeftIcon, current: false },
 ]
 
 
